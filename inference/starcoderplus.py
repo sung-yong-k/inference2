@@ -150,7 +150,7 @@ model = AutoGPTQForCausalLM.from_quantized(model_name_or_path,
 
 command_list=["starcoderplus"]
 v = ["V1"]
-for root, dirs, files in os.walk("/prompt_final"):
+for root, dirs, files in os.walk("prompt_final"):
     for file_name in files:
         print("file name is: ")
         print(file_name)
@@ -159,7 +159,7 @@ for root, dirs, files in os.walk("/prompt_final"):
             generation_type=0
             start = time.time()
             file_path = os.path.join(root, file_name)
-            input = open("/prompt_final/"+file_name, "r",encoding='utf-8')
+            input = open("prompt_final/"+file_name, "r",encoding='utf-8')
             line = input.readlines()
             input.close()
             total_lines = len(line)
