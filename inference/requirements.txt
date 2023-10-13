@@ -1,0 +1,12 @@
+accelerate
+appdirs
+loralib
+
+gradio
+sentencepiece
+
+scipy
+xformers
+openai
+auto-gptq
+transformers
