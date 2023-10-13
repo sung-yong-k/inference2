@@ -187,6 +187,6 @@ for root, dirs, files in os.walk("prompt_final"):
             input = open("Result/starcoderplus_time_" +temps+"_"+ file_name, "w",encoding='utf-8')            
             input.write(code)
             input.close()
-            break
+      
             
             
