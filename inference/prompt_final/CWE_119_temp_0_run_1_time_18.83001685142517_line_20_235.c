@@ -17,12 +17,3 @@ int main()
     printf("Enter values in structure\n");
     for (i = 0; i < 2; i++) {
         scanf("%d", &var[i].a);
-        printf("Enter string: ");
-        scanf("%s", var[i].ab);
-    }
-    
-    fwrite(var, sizeof(b), 2, f);
-    fclose(f);
-    
-    return 0;
-}
