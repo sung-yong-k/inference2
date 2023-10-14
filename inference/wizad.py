@@ -192,6 +192,8 @@ for version in v:
                 code= extract_substring(code,"#include","}")
 
                 print(code)
+                if print = Null:
+                    print(outputs[0]['generated_text'])
                 end_time=time.time()-start
                 temps = str(end_time)
 
