@@ -140,7 +140,7 @@ checkpoint = "bigcode/starcoder"
 device = "cuda" # for GPU usage or "cpu" for CPU usage
 
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-model = AutoModelForCausalLM.from_pretrained(checkpoint,device_map="auto" , max_memory=get_gpus_max_memory("35GB")).to(device)
+model = AutoModelForCausalLM.from_pretrained(checkpoint,device_map="auto" , max_memory=get_gpus_max_memory("35GB"))
 
 
 
