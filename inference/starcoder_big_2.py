@@ -16,7 +16,7 @@ from hf_hub_ctranslate2 import GeneratorCT2fromHfHub
 
 print("install openai and cppcheck and create production before before")
 #key = input("Enter a key: ")
-openai.api_key = key
+#openai.api_key = key
 
 
 def balance_c_code(input_code):
