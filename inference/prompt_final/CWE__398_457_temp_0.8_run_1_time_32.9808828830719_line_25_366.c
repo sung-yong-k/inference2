@@ -22,9 +22,3 @@ int main() {
 
     // print the extracted numbers
     for (i = 0; i < num_count; i++) {
-        printf("%d ", nums[i]);
-    }
-    printf("\n");
-    
-    return 0;
-}

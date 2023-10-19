@@ -32,24 +32,3 @@ int main() {
             token = strtok(NULL, " ");
         }
         
-        args[i] = NULL; // set the last element of args array to NULL
-        
-        pid_t pid = fork(); // create a child process
-
-        if (pid == 0) {
-            // child process
-            execvp(args[0], args); // execute the command
-            printf("Command not found.\n"); // if execvp returns, then the command was not found
-            exit(1); // exit with error status
-        } else if (pid > 0) {
-            // parent process
-            waitpid(pid, &status, 0); // wait for the child process to complete
-        } else {
-            // fork failed
-            printf("Fork failed.\n");
-            exit(1); // exit with error status
-        }
-    }
-
-    return 0;
-}

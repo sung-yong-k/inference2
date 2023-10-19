@@ -22,23 +22,3 @@ int main(int argc, char *argv[]) {
     struct stat sb;
     if (fstat(fd, &sb) == -1) {
         perror("fstat");
-        return 1;
-    }
-
-    // Map the input file to memory
-    void *file_data = mmap(NULL, sb.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
-    if (file_data == MAP_FAILED) {
-        perror("mmap");
-        return 1;
-    }
-
-    // Output the contents of the file
-    printf("File contents:\n");
-    fwrite(file_data, sb.st_size, 1, stdout);
-
-    // Clean up resources
-    munmap(file_data, sb.st_size);
-    close(fd);
-
-    return 0;
-}

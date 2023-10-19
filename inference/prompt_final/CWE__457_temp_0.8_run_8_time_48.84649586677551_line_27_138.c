@@ -24,27 +24,3 @@ double polynomial(double x)
         printf("\nInsert coefficient of x^%d\t", k);
         scanf("%f%*c", &z[k]);
     }
-    
-    double result = 0;
-    for (k = u - 1; k >= 0; k--)
-    {
-        result += z[k] * pow(x, k);
-    }
-    
-    return result;
-}
-
-int main()
-{
-    double x;
-    printf("Enter a value for x: ");
-    scanf("%lf", &x);
-    
-    double result = mulfun(x);
-    printf("Result of mulfun: %lf\n", result);
-    
-    result = polynomial(x);
-    printf("Result of polynomial: %lf\n", result);
-    
-    return 0;
-}

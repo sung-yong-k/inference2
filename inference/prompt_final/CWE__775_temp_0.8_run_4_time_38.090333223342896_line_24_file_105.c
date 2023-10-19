@@ -21,15 +21,3 @@ int main(int argc, char *argv[]) {
 
     if (buffer == NULL) {
         fprintf(stderr, "Error allocating memory\n");
-        return 1;
-    }
-
-    fread(buffer, length, 1, file);
-    fclose(file);
-
-    // Code to manipulate the file data using the buffer
-    
-    free(buffer);
-
-    return 0;
-}

@@ -23,19 +23,3 @@ int main(int argc, char *argv[]) {
 
     if (buffer == NULL) {
         fprintf(stderr, "Error allocating memory\n");
-        return 1;
-    }
-
-    if (fread(buffer, length, 1, file) != 1) {
-        fprintf(stderr, "Error reading file\n");
-        free(buffer);
-        return 1;
-    }
-
-    fclose(file);
-
-    // TODO: Add your code here
-
-    free(buffer);
-    return 0;
-}

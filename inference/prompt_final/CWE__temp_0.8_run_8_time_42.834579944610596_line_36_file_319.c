@@ -33,21 +33,3 @@ int main()
         }
 
         // Check if input is available on stdin
-        if (FD_ISSET(STDIN_FILENO, &fds)) {
-            char user_message[100];
-            fgets(user_message, sizeof(user_message), stdin);
-            user_message[strlen(user_message) - 1] = '\0';  // Remove newline character
-
-            // Send the user's message to the pipe
-            int fifo_fd = open(FIFO_NAME, O_WRONLY);
-            write(fifo_fd, user_message, strlen(user_message));
-            close(fifo_fd);
-        }
-    }
-
-    // Close and remove the FIFO
-    close(fd);
-    unlink(FIFO_NAME);
-
-    return 0;
-}

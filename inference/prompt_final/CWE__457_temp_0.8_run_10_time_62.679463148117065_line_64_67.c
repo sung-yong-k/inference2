@@ -61,12 +61,3 @@ void arrays()
     printf("\nUnion: ");
     for (j = 0; j <= indexu; j++) // printing union
     {
-        printf("%d ", unions[j]);
-    }
-}
-
-int main()
-{
-    arrays();
-    return 0;
-}

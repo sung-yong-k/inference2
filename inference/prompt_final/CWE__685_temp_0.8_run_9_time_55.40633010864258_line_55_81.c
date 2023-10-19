@@ -52,9 +52,3 @@ int main()
         }
         else
         {
-            printf("Invalid expression. Please try again.\n");
-        }
-    }
-
-    return 0;
-}

@@ -9,10 +9,3 @@ int main() {
     printf("%d\n", *(*ptr + 1)); // prints 2
     printf("%d\n", **(ptr + 1)); // prints 4
     
-    printf("%d\n", *(*(ptr+1) + 1)); // prints 5
-    printf("%d\n", *(*ptr + 2)); // prints 3
-    printf("%d\n", *(*(ptr+2))); // prints 7
-    printf("%d\n", *(*(ptr+2) + 2)); // prints 9
-
-    return 0;
-}

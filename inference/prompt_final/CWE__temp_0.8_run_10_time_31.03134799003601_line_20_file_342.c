@@ -17,26 +17,3 @@ int main(int argc, char *argv[]) {
     // Initialize the array
     for (size_t i = 0; i < size; i++) {
         array[i] = i;
-    }
-
-    // Print the original array
-    printf("Original Array:\n");
-    for (size_t i = 0; i < size; i++) {
-        printf("%d ", array[i]);
-    }
-    printf("\n");
-
-    // Increment the range of the array
-    long result = inc_cp_range(array, array + size);
-
-    // Print the modified array
-    printf("Modified Array:\n");
-    for (size_t i = 0; i < size; i++) {
-        printf("%d ", array[i]);
-    }
-    printf("\n");
-
-    free(array);
-
-    return 0;
-}

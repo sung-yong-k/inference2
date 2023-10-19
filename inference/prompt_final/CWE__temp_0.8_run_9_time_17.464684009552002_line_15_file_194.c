@@ -12,8 +12,3 @@ int main() {
     printf("Enter a string: ");
     fgets(input, 100, stdin);
 
-    // Call the foo function
-    foo(input);
-
-    return 0;
-}

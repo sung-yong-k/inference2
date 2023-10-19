@@ -33,25 +33,3 @@ int main() {
                 token = strtok(NULL, " ");
             }
             
-            args[i] = NULL; // set the last element to NULL to terminate the argument list
-            
-            if (execvp(args[0], args) == -1) { // execute the command
-                perror("Error executing command");
-                exit(EXIT_FAILURE);
-            }
-        } else if (pid > 0) { // parent process
-            waitpid(pid, &status, 0); // wait for child process to finish
-            
-            if (WIFEXITED(status)) {
-                printf("Child process exited with status %d\n", WEXITSTATUS(status));
-            } else {
-                printf("Child process did not exit normally\n");
-            }
-        } else { // error forking
-            perror("Error forking");
-            exit(EXIT_FAILURE);
-        }
-    }
-
-    return 0;
-}

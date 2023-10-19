@@ -16,7 +16,3 @@ int main() {
     printf("looool\n");
     printf("looool\n");
     printf("looool\n");
-    printf("looool\n");
-    
-    return 0;
-}

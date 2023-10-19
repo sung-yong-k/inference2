@@ -13,16 +13,3 @@ int main() {
 
     // Create and store new creature structs
     for (int i = 0; i < num_creatures; i++) {
-        creatures[i].id = i + 1;  // Set the id of the creature
-        sprintf(creatures[i].name, "Creature %d", i + 1);  // Set the name of the creature
-    }
-
-    // Print the information of all creatures
-    for (int i = 0; i < num_creatures; i++) {
-        printf("Creature ID: %d, Name: %s\n", creatures[i].id, creatures[i].name);
-    }
-
-    free(creatures);  // Free the memory allocated for the creatures array
-
-    return 0;
-}

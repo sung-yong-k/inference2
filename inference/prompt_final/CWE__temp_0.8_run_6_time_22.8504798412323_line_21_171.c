@@ -18,19 +18,3 @@ int main() {
     while (n != -1) {
         scanf("%d", &n);
         if (n != -1) {
-            extend(&v, i);
-            v[i] = n;
-            i++;
-        }
-    }
-
-    printf("The numbers entered are: ");
-    for (int j = 0; j < i; j++) {
-        printf("%d ", v[j]);
-    }
-    printf("\n");
-
-    free(v);
-
-    return 0;
-}

@@ -23,11 +23,3 @@ int main(int argc, char *argv[])
     double *data = (double *)malloc(1000 * sizeof(double));
     if (data == NULL)
     {
-        fprintf(stderr, "Błąd alokacji pamięci");
-        exit(1);
-    }
-
-    // Rest of your code goes here...
-
-    return 0;
-}

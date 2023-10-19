@@ -17,20 +17,3 @@ int main(int argc, char *argv[]) {
 
     // Concatenate the command line arguments into the C string
     int pos = 0;
-    for (i = 1; i < argc; i++) {
-        strcpy(cstring + pos, argv[i]);
-        pos += strlen(argv[i]);
-        cstring[pos] = ' ';  // Add space between arguments
-        pos++;
-    }
-
-    cstring[pos - 1] = '\0';  // Replace last space with null terminator
-
-    // Print the concatenated C string
-    printf("Concatenated string: %s\n", cstring);
-
-    // Free the allocated memory
-    free(cstring);
-
-    return 0;
-}

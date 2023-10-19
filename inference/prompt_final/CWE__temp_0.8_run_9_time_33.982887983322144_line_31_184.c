@@ -28,22 +28,3 @@ void brute_init(int maxLen) {
         free(config->str);
         free(config);
     }
-
-    config = malloc(sizeof(struct bruteConfig));
-    config->indices = malloc(sizeof(int) * maxLen);
-    config->str = malloc(sizeof(char) * (maxLen + 1));
-    config->maxDepth = maxLen;
-    config->index = 0;
-    config->depth = 0;
-    config->finished = false;
-    memset(config->indices, 0, sizeof(int) * maxLen);
-    memset(config->str, 0, sizeof(char) * (maxLen + 1));
-}
-
-int main() {
-    brute_init(5);
-
-    // Rest of the code...
-
-    return 0;
-}

@@ -64,14 +64,3 @@ int main() {
             pthread_mutex_lock(&fifo.lock);
         }
         memcpy(fifo.buffer[fifo.head], array, ARRAY_LENGTH);
-        fifo.head = (fifo.head + 1) % BUFFER_SIZE;
-        fifo.count++;
-        pthread_mutex_unlock(&fifo.lock);
-
-        // spend some time before generating the next array
-        sleep(1);
-    }
-
-    pthread_join(second_tid, NULL);
-    return 0;
-}

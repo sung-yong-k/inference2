@@ -48,10 +48,3 @@ int main(int argc, char **argv) {
         free(data);
     } else {
         printf("Invalid magic number: %u\n", magic_number);
-        return 1;
-    }
-
-    fclose(fp);
-
-    return 0;
-}

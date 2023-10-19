@@ -21,14 +21,3 @@ void LetterCapitalize(char str[]) {
 int main() {
     char str[50];
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-
-    // Remove trailing newline character
-    if(str[strlen(str) - 1] == '\n') {
-        str[strlen(str) - 1] = '\0';
-    }
-
-    LetterCapitalize(str);
-
-    return 0;
-}

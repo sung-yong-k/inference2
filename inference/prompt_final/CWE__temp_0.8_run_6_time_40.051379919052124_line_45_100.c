@@ -42,21 +42,3 @@ int main(void)
 void push(int x)
 {
     struct node *newNode = malloc(sizeof(struct node));
-    newNode->data = x;
-    newNode->next = first;
-    first = newNode;
-}
-
-void pop()
-{
-    if (first == NULL)
-    {
-        printf("Stack is empty.\n");
-        return;
-    }
-
-    struct node *temp = first;
-    first = first->next;
-    printf("Popped value: %d\n", temp->data);
-    free(temp);
-}

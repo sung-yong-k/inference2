@@ -25,16 +25,3 @@ char* trim_whitespace(const char* input) {
 
     // Copy the trimmed string and add the null terminator
     strncpy(trimmed_string, start, trimmed_length);
-    trimmed_string[trimmed_length] = '\0';
-
-    return trimmed_string;
-}
-
-int main() {
-    const char* input = "   Hello, World!   ";
-    char* trimmed = trim_whitespace(input);
-    printf("Trimmed string: '%s'\n", trimmed);
-    free(trimmed);
-
-    return 0;
-}

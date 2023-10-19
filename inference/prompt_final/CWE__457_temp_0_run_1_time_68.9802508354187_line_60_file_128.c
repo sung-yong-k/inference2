@@ -57,17 +57,3 @@ int main() {
 
     // Sort the rows based on the value in the 4th column
     qsort(rows, num_rows, sizeof(struct csv_row), compare_rows);
-
-    // Print the sorted rows
-    for (int i = 0; i < num_rows; i++) {
-        for (int j = 0; j < MAX_COLS; j++) {
-            printf("%s ", rows[i].cols[j]);
-        }
-        printf("\n");
-    }
-
-    // Close the input file
-    fclose(fp);
-
-    return 0;
-}

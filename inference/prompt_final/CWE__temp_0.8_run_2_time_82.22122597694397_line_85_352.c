@@ -82,6 +82,3 @@ int main() {
   add_child(child1, child5);
   
   print_tree(root, 0);
-  
-  return 0;
-}

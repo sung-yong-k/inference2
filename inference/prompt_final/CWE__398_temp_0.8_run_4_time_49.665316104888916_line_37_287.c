@@ -34,22 +34,3 @@ int main(void)
     return 0;
 }
 
-void sort(int *arr, int cnt, int **low, int **high)
-{
-    int negIndex = 0;
-    int posIndex = 0;
-
-    for (int i = 0; i < cnt; i++)
-    {
-        if (arr[i] < 0)
-        {
-            (*low)[negIndex] = arr[i];
-            negIndex++;
-        }
-        else
-        {
-            (*high)[posIndex] = arr[i];
-            posIndex++;
-        }
-    }
-}

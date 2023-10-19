@@ -44,30 +44,3 @@ int main(int argc, char **argv) {
         free(data);
     } else {
         printf("Invalid magic number: %u\n", magic_number);
-        return 1;
-    }
-
-    fclose(fp);
-
-    return 0;
-}
-
-void load_mnist_images(char *filename, uint8_t **images, uint32_t *num_images) {
-    // Implementation for loading MNIST images
-    // ...
-}
-
-void load_mnist_labels(char *filename, uint8_t **labels, uint32_t *num_labels) {
-    // Implementation for loading MNIST labels
-    // ...
-}
-
-void print_images(uint8_t *images, uint32_t num_images) {
-    // Implementation for printing MNIST images
-    // ...
-}
-
-void print_labels(uint8_t *labels, uint32_t num_labels) {
-    // Implementation for printing MNIST labels
-    // ...
-}

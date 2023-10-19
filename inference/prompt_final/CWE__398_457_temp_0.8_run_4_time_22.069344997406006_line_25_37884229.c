@@ -22,7 +22,3 @@ int main() {
         str[i] = c + 1;
     }
 
-    printf("Encrypted word: %s\n", str);
-
-    return 0;
-}

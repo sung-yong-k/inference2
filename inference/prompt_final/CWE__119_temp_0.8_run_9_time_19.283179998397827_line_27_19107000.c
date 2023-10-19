@@ -24,8 +24,3 @@ int main(void) {
 struct person userInput(void) {
     struct person p;
     printf("Enter name: ");
-    scanf("%s", p.name);
-    printf("Enter age: ");
-    scanf("%d", &p.age);
-    return p;
-}

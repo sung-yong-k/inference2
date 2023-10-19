@@ -16,14 +16,3 @@ int main() {
     char word[MAX_WORD_LENGTH];
     int i = 0;
 
-    while (fscanf(file, "%s", word) == 1) {
-        strcpy(insouts[i], word);
-        i++;
-    }
-
-    fclose(file);
-
-    // Rest of the code
-
-    return 0;
-}

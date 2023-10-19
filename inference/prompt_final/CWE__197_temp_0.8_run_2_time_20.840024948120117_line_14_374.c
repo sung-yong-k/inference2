@@ -11,13 +11,3 @@ int main() {
     }
 
     char ch = fgetc(ptr);
-
-    while (ch != EOF) {
-        printf("%c", ch);
-        ch = fgetc(ptr);
-    }
-
-    fclose(ptr);
-
-    return 0;
-}

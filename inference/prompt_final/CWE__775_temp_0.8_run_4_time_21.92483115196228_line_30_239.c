@@ -27,6 +27,3 @@ int main() {
     fread(&header, sizeof(BITMAPFILEHEADER), 1, fp);
 
     printf("Type: %04x\n", header.Type);
-
-    return 0;
-}
