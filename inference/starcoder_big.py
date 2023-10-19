@@ -136,7 +136,7 @@ checkpoint = "bigcode/starcoder"
 device = "cuda" # for GPU usage or "cpu" for CPU usage
 
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-model = AutoModelForCausalLM.from_pretrained(checkpoint,load_in_8bit=True,).to(device)
+model = AutoModelForCausalLM.from_pretrained(checkpoint,load_in_8bit=True,token=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).to(device)
 
 
 
