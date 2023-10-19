@@ -1,7 +1,7 @@
 accelerate
 appdirs
 loralib
-
+torch
 gradio
 sentencepiece
 
