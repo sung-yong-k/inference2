@@ -150,7 +150,7 @@ model = AutoGPTQForCausalLM.from_quantized(model_name_or_path,
 logging.set_verbosity(logging.CRITICAL)
 
 pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
-prompt_template = '''Below is an instruction that describes a task. Write a response that appropriately completes the request
+prompt_template = '''Below is a code that need to be completed. Complete the code
 
 ### Instruction: {prompt}
 
@@ -186,7 +186,7 @@ for version in v:
 
                 print("launching code")
                 prompt = prompt_template.format(prompt=text)
-                outputs = pipe(prompt, max_new_tokens=300, do_sample=True, temperature=0.1, top_k=50, top_p=0.95)
+                outputs = pipe(prompt, max_new_tokens=500, do_sample=True, temperature=0.1, top_k=50, top_p=1)
                 code = outputs[0]['generated_text']
                 code = extract_response(outputs[0]['generated_text'])
                 code= extract_substring(code,"#include","}")
