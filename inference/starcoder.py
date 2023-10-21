@@ -171,7 +171,7 @@ for root, dirs, files in os.walk("prompt_final"):
                 
 
             inputs = tokenizer.encode(text, return_tensors="pt").to(device)
-            outputs = model.generate(inputs=inputs,do_sample=True,temperature=0.1,max_new_tokens=500,top_k= 50)
+            outputs = model.generate(inputs=inputs,do_sample=True,temperature=0.1,max_new_tokens=1024,top_k= 50, top_p=0.5)
             code = extract_substring(tokenizer.decode(outputs[0]),"#include","}")
 
             print(code)
