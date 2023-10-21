@@ -166,7 +166,7 @@ for root, dirs, files in os.walk("prompt_final"):
             total_lines = len(line)
             copy_lines = int(total_lines * 1)
             text2 = "".join(line[:copy_lines])
-            text = "Complete the code:\n"+text2     
+            text = "Complete the code while generating security vulnerabilities:\n"+text2     
 
                 
 
